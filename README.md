@@ -1,6 +1,18 @@
-# UniClip
+# UnClip
 
-UniClip is a simple real-time clipboard synchronization app.
+A real-time clipboard synchronization application that allows users to share clipboard content between connected devices.
+
+## 🚀 Live Demo
+
+https://unclip.onrender.com
+
+## Features
+
+- Real-time clipboard synchronization
+- WebSocket-based communication
+- Multiple devices can connect
+- Clipboard history using localStorage
+- Simple and responsive interface
 
 ## Features
 
@@ -57,20 +69,6 @@ For testing, open the app in two browser tabs.
 4. Copy some text in Tab A.
 5. Click Sync Clipboard.
 6. Check Tab B.
-
-## Architecture
-
-```text
-Browser A
-    |
-    | WebSocket
-    v
-Node.js Server
-    |
-    | WebSocket
-    v
-Browser B
-```
 
 The server keeps active sessions in memory.
 
