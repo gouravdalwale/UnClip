@@ -476,12 +476,8 @@ wss.on(
 
 // 9. START SERVER
 
-server.listen(
-    3000,
-    function () {
+const PORT = process.env.PORT || 3000;
 
-        console.log(
-            "Server running on http://localhost:3000"
-        );
-    }
-);
+server.listen(PORT, "0.0.0.0", function () {
+    console.log(`Server running on port ${PORT}`);
+});
