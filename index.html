@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UniClip</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>UniClip</h1>
+        <p>Real-time clipboard synchronization</p>
+    </header>
+
+    <main>
+
+        <!-- Session -->
+        <section class="card">
+            <h2>Session</h2>
+
+            <div class="session-actions">
+
+                <button id="create-session">
+                    Create Session
+                </button>
+
+                <div class="join-session">
+
+                    <input
+                        id="pairing-code"
+                        type="text"
+                        maxlength="6"
+                        inputmode="numeric"
+                        placeholder="Enter pairing code"
+                    >
+
+                    <button id="join-session">
+                        Join Session
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="session-info">
+
+                <p>
+                    Pairing Code:
+                    <strong id="session-code">------</strong>
+                </p>
+
+                <p id="connection-status">
+                    Connecting...
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- Connected Devices -->
+        <section class="card">
+
+            <h2>Connected Devices</h2>
+
+            <ul id="device-list">
+                <li>No devices connected</li>
+            </ul>
+
+        </section>
+
+
+        <!-- Clipboard -->
+        <section class="card">
+
+            <h2>Clipboard</h2>
+
+            <p>
+                Copy text or a link, then click Sync Clipboard.
+            </p>
+
+            <button id="sync-clipboard">
+                Sync Clipboard
+            </button>
+
+            <p id="clipboard-message"></p>
+
+            <div id="received-content" class="received-content hidden">
+
+                <h3>Latest Synced Content</h3>
+
+                <div id="received-text"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Clipboard History -->
+        <section class="card">
+
+            <div class="history-header">
+
+                <h2>Clipboard History</h2>
+
+                <button id="clear-history" class="danger">
+                    Clear All
+                </button>
+
+            </div>
+
+            <div id="history-list">
+                <p class="muted">
+                    No clipboard history yet.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        UniClip — Real-time clipboard synchronization
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
