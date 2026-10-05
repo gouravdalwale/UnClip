@@ -35,7 +35,10 @@ connectSocket();
 
 function connectSocket() {
 
-    socket = new WebSocket("ws://" + window.location.host);
+    socket = new WebSocket(
+    (window.location.protocol === "https:" ? "wss://" : "ws://") +
+    window.location.host
+);
 
 
     socket.addEventListener("open", function () {
